@@ -1,6 +1,7 @@
 import { Navbar } from "./components/layout/Navbar";
 import { Hero } from "./components/sections/Hero";
 import { TrustedBy } from "./components/sections/TrustedBy";
+import { ServiceCategories } from "./components/sections/ServiceCategories";
 import { Services } from "./components/sections/Services";
 import { FeatureGrid } from "./components/sections/FeatureGrid";
 import { SecureSection } from "./components/sections/SecureSection";
@@ -16,6 +17,7 @@ export function App() {
       <main className="flex flex-col items-center overflow-hidden">
         <Hero />
         <TrustedBy />
+        <ServiceCategories />
         <Services />
         <FeatureGrid />
         <SecureSection />
