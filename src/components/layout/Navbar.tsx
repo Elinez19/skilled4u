@@ -13,26 +13,26 @@ export function Navbar() {
       <div className="container mx-auto px-6 sm:px-10 lg:px-16 max-w-7xl h-20 flex items-center justify-between">
         <div className="flex items-center gap-2">
           {/* Logo Placeholder */}
-          <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-bold text-xl">
+          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">
             S
           </div>
-          <span className="font-bold text-xl tracking-tight text-slate-900">
-            Skilled<span className="text-emerald-600">4U</span>
+          <span className="font-bold text-xl tracking-tight text-foreground">
+            Skilled<span className="text-primary">4U</span>
           </span>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
-          <a href="#" className="hover:text-emerald-600 transition-colors">
+        <nav className="hidden md:flex items-center gap-8 font-medium text-sm text-muted-foreground">
+          <a href="#" className="hover:text-primary transition-colors">
             Find Pros
           </a>
-          <a href="#" className="hover:text-emerald-600 transition-colors">
-            For Business
+          <a href="#" className="hover:text-primary transition-colors">
+            Become a Pro
           </a>
-          <a href="#" className="hover:text-emerald-600 transition-colors">
+          <a href="#" className="hover:text-primary transition-colors">
             How it Works
           </a>
-          <a href="#" className="hover:text-emerald-600 transition-colors">
+          <a href="#" className="hover:text-primary transition-colors">
             About Us
           </a>
         </nav>
@@ -42,7 +42,7 @@ export function Navbar() {
           <Button variant="ghost" className="font-semibold">
             Log In
           </Button>
-          <Button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-full px-6">
+          <Button className="btn btn-primary rounded-full px-6">
             Sign Up &rarr;
           </Button>
         </div>
@@ -55,29 +55,29 @@ export function Navbar() {
               <span className="sr-only">Toggle menu</span>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <SheetTitle className="text-left font-bold text-xl tracking-tight text-slate-900 mb-8 border-b pb-4">
-                Skilled<span className="text-emerald-600">4U</span>
+              <SheetTitle className="text-left font-bold text-xl tracking-tight text-foreground mb-8 border-b pb-4">
+                Skilled<span className="text-primary">4U</span>
               </SheetTitle>
-              <nav className="flex flex-col gap-6 text-lg font-medium text-slate-600">
-                <a href="#" className="hover:text-emerald-600 transition-colors">
+              <nav className="flex flex-col gap-6 text-lg font-medium text-muted-foreground">
+                <a href="#" className="hover:text-primary transition-colors">
                   Find Pros
                 </a>
-                <a href="#" className="hover:text-emerald-600 transition-colors">
-                  For Business
+                <a href="#" className="hover:text-primary transition-colors">
+                  Become a Pro
                 </a>
-                <a href="#" className="hover:text-emerald-600 transition-colors">
+                <a href="#" className="hover:text-primary transition-colors">
                   How it Works
                 </a>
-                <a href="#" className="hover:text-emerald-600 transition-colors">
+                <a href="#" className="hover:text-primary transition-colors">
                   About Us
                 </a>
                 
-                <div className="h-px w-full bg-gray-100 my-2"></div>
+                <div className="h-px w-full bg-border/50 my-2"></div>
                 
-                <a href="#" className="hover:text-emerald-600 transition-colors font-semibold py-2">
+                <a href="#" className="hover:text-primary transition-colors font-semibold py-2">
                   Log In
                 </a>
-                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-full w-full py-6 text-base">
+                <Button className="btn btn-primary rounded-full w-full py-6 text-base">
                   Sign Up &rarr;
                 </Button>
               </nav>

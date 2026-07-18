@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section className="px-6 sm:px-10 lg:px-16 pt-6 pb-12 w-full flex justify-center">
       {/* Main container with rounded corners and overflow hidden */}
-      <div className="bg-slate-900 rounded-[2rem] w-full max-w-7xl relative overflow-hidden min-h-[600px] flex items-center">
+      <div className="bg-foreground rounded-[2rem] w-full max-w-7xl relative overflow-hidden min-h-[600px] flex items-center">
         
         {/* Background Image positioned to the right half */}
         <div className="absolute top-0 right-0 w-full md:w-[65%] h-full">
@@ -16,8 +16,8 @@ export function Hero() {
             className="object-cover w-full h-full object-center"
           />
           {/* Gradient overlay to seamlessly blend the image into the dark left background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/70 to-transparent md:to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent md:hidden"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/70 to-transparent md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent md:hidden"></div>
         </div>
 
         {/* Content Wrapper */}
@@ -29,23 +29,23 @@ export function Hero() {
               variant="outline" 
               className="mb-6 border-white/20 text-white bg-white/5 hover:bg-white/10 px-4 py-1.5 text-sm font-medium rounded-full backdrop-blur-sm"
             >
-              Your Needs. Our Priority.
+              On-Demand Skilled Professionals
             </Badge>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight drop-shadow-md">
-              Connecting you with <br className="hidden md:block"/>
-              <span className="text-emerald-400">skilled artisans.</span>
+              The Uber for <br className="hidden md:block"/>
+              <span className="text-primary">Skilled Artisans.</span>
             </h1>
             
-            <p className="text-slate-300 text-lg md:text-xl mb-8 max-w-md leading-relaxed drop-shadow-md">
-              Find trusted professionals for your everyday needs and your biggest projects.
+            <p className="text-muted text-lg md:text-xl mb-8 max-w-md leading-relaxed drop-shadow-md">
+              Book trusted plumbers, electricians, and carpenters on-demand. Just like calling a ride, but for your home and projects.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-full px-8 py-6 text-base shadow-lg">
-                Find an Artisan &rarr;
+              <Button size="lg" className="btn btn-primary rounded-full px-8 py-6 text-base">
+                Book a Pro Now &rarr;
               </Button>
-              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:text-white bg-transparent font-semibold rounded-full px-8 py-6 text-base backdrop-blur-sm">
+              <Button size="lg" variant="outline" className="btn btn-outline border-white/20 text-white hover:bg-white/10 hover:text-white bg-transparent rounded-full px-8 py-6 text-base backdrop-blur-sm">
                 Explore Services
               </Button>
             </div>
@@ -55,7 +55,7 @@ export function Hero() {
           <div className="w-full md:w-[45%] flex justify-start md:justify-end mt-16 md:mt-0">
             <div className="glass rounded-2xl p-6 w-full max-w-[320px] shadow-2xl relative mt-10 md:mt-0">
               <div className="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
-                <div className="bg-emerald-600/20 p-2 rounded-full text-emerald-400">
+                <div className="bg-primary/20 p-2 rounded-full text-primary">
                   <UserCircle size={24} />
                 </div>
                 <div>
@@ -78,7 +78,7 @@ export function Hero() {
                 </div>
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-white/70">Status</span>
-                  <span className="text-emerald-400 font-medium flex items-center gap-1">
+                  <span className="text-primary font-medium flex items-center gap-1">
                     <CheckCircle2 size={14} /> Confirmed
                   </span>
                 </div>

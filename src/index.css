@@ -132,8 +132,65 @@
     }
 }
 
+@layer components {
+  /* Typography */
+  .heading-1 {
+    @apply text-4xl md:text-5xl font-extrabold tracking-tight text-foreground;
+  }
+  .heading-2 {
+    @apply text-3xl md:text-4xl font-bold tracking-tight text-foreground;
+  }
+  .heading-3 {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight text-foreground;
+  }
+  .body-text {
+    @apply text-base text-muted-foreground leading-relaxed;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background h-11 py-2 px-6;
+  }
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg active:scale-95;
+  }
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm active:scale-95;
+  }
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground active:scale-95 transition-colors;
+  }
+  .btn-ghost {
+    @apply text-primary hover:bg-primary/10 active:scale-95;
+  }
+  
+  /* Cards */
+  .card-container {
+    @apply rounded-2xl border border-border/50 bg-card text-card-foreground shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  /* Inputs */
+  .input-field {
+    @apply flex h-11 w-full rounded-lg border border-input bg-background px-4 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-shadow;
+  }
+
+  /* Layout and Sections */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  .container-center {
+    @apply container mx-auto px-4 md:px-6 lg:px-8;
+  }
+}
+
 @layer utilities {
   .glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+    @apply bg-background/60 backdrop-blur-lg border border-border/50 shadow-xl;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-linear-to-r from-primary to-blue-400;
+  }
+  .bg-gradient-primary {
+    @apply bg-linear-to-br from-primary to-blue-600;
   }
 }
