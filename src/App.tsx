@@ -1,21 +1,26 @@
-import { Button } from "@/components/ui/button"
+import { Navbar } from "./components/layout/Navbar";
+import { Hero } from "./components/sections/Hero";
+import { Features } from "./components/sections/Features";
+import { TrustedBy } from "./components/sections/TrustedBy";
+import { Services } from "./components/sections/Services";
 
 export function App() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+    <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-blue-100">
+      <Navbar />
+      <main className="flex flex-col items-center overflow-hidden">
+        <Hero />
+        <Features />
+        <TrustedBy />
+        <Services />
+      </main>
+      <footer className="w-full border-t border-gray-100 py-12 mt-10">
+        <div className="container mx-auto px-4 text-center text-slate-500 text-sm">
+          <p>&copy; {new Date().getFullYear()} Skilled4U. All rights reserved.</p>
         </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
