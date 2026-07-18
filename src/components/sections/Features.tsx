@@ -25,7 +25,7 @@ export function Features() {
   ];
 
   return (
-    <section className="py-20 px-4 md:px-6 w-full max-w-7xl mx-auto">
+    <section className="py-20 px-6 sm:px-10 lg:px-16 w-full max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         {features.map((feature, index) => (
           <div key={index} className="flex flex-col items-start">

@@ -4,34 +4,34 @@ import { Wrench, Zap, Droplets, Sparkles, Hammer } from "lucide-react";
 export function Services() {
   const services = [
     {
-      icon: <Wrench className="w-6 h-6 text-blue-600" />,
+      icon: <Wrench className="w-6 h-6 text-emerald-600" />,
       title: "Home Maintenance",
       description: "General repairs, mounting, and everyday fixes for your home.",
     },
     {
-      icon: <Zap className="w-6 h-6 text-blue-600" />,
+      icon: <Zap className="w-6 h-6 text-emerald-600" />,
       title: "Electrical Works",
       description: "Safe and reliable electrical installations and troubleshooting.",
     },
     {
-      icon: <Droplets className="w-6 h-6 text-blue-600" />,
+      icon: <Droplets className="w-6 h-6 text-emerald-600" />,
       title: "Plumbing",
       description: "Expert plumbers for leaks, installations, and pipe repairs.",
     },
     {
-      icon: <Sparkles className="w-6 h-6 text-blue-600" />,
+      icon: <Sparkles className="w-6 h-6 text-emerald-600" />,
       title: "Cleaning Services",
       description: "Deep cleaning, regular housekeeping, and move-out cleans.",
     },
     {
-      icon: <Hammer className="w-6 h-6 text-blue-600" />,
+      icon: <Hammer className="w-6 h-6 text-emerald-600" />,
       title: "Renovations",
       description: "Major home improvements and structural remodeling projects.",
     },
   ];
 
   return (
-    <section className="py-20 px-4 md:px-6 w-full max-w-7xl mx-auto">
+    <section className="py-20 px-6 sm:px-10 lg:px-16 w-full max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-end mb-12">
         <div>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
@@ -50,16 +50,16 @@ export function Services() {
         {services.map((service, index) => (
           <div 
             key={index} 
-            className="border border-gray-100 rounded-3xl p-8 hover:shadow-xl hover:border-blue-100 transition-all duration-300 flex flex-col items-start group bg-white"
+            className="border border-gray-100 rounded-3xl p-8 hover:shadow-xl hover:border-emerald-100 transition-all duration-300 flex flex-col items-start group bg-white"
           >
-            <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               {service.icon}
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
             <p className="text-slate-500 text-sm leading-relaxed mb-8 flex-grow">
               {service.description}
             </p>
-            <a href="#" className="text-blue-600 font-semibold text-sm flex items-center hover:text-blue-700 transition-colors mt-auto">
+            <a href="#" className="text-emerald-600 font-semibold text-sm flex items-center hover:text-emerald-700 transition-colors mt-auto">
               Learn More <span className="ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
             </a>
           </div>
