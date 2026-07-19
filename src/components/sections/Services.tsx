@@ -1,35 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Wrench, Zap, Droplets, Sparkles, Hammer } from "lucide-react";
+import { servicesList } from "@/data";
 
 export function Services() {
-  const services = [
-    {
-      icon: <Wrench className="w-6 h-6 text-primary" />,
-      title: "Home Maintenance",
-      description: "General repairs, mounting, and everyday fixes for your home.",
-    },
-    {
-      icon: <Zap className="w-6 h-6 text-primary" />,
-      title: "Electrical Works",
-      description: "Safe and reliable electrical installations and troubleshooting.",
-    },
-    {
-      icon: <Droplets className="w-6 h-6 text-primary" />,
-      title: "Plumbing",
-      description: "Expert plumbers for leaks, installations, and pipe repairs.",
-    },
-    {
-      icon: <Sparkles className="w-6 h-6 text-primary" />,
-      title: "Cleaning Services",
-      description: "Deep cleaning, regular housekeeping, and move-out cleans.",
-    },
-    {
-      icon: <Hammer className="w-6 h-6 text-primary" />,
-      title: "Renovations",
-      description: "Major home improvements and structural remodeling projects.",
-    },
-  ];
-
   return (
     <section className="py-20 px-6 sm:px-10 lg:px-16 w-full max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-end mb-12">
@@ -47,7 +19,7 @@ export function Services() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-        {services.map((service, index) => (
+        {servicesList.map((service, index) => (
           <div 
             key={index} 
             className="border border-border/50 rounded-3xl p-8 hover:shadow-xl hover:border-primary/20 transition-all duration-300 flex flex-col items-start group bg-card"

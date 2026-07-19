@@ -2,6 +2,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
+import { footerLinks } from "@/data";
 
 export function Footer() {
   return (
@@ -34,30 +35,31 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-foreground mb-6 text-sm">Quick Links</h4>
             <ul className="space-y-4 text-sm text-muted-foreground font-medium">
-              <li><a href="#" className="hover:text-primary transition-colors">Personal</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Business</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Wealth</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Loans</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
+              {footerLinks.quickLinks.map((link, idx) => (
+                <li key={idx}><a href={link.href} className="hover:text-primary transition-colors">{link.title}</a></li>
+              ))}
             </ul>
           </div>
           <div>
             <h4 className="font-bold text-foreground mb-6 text-sm">Resources</h4>
             <ul className="space-y-4 text-sm text-muted-foreground font-medium">
-              <li><a href="#" className="hover:text-primary transition-colors">Help Center</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">FAQs</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Security</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Contact Us</a></li>
+              {footerLinks.resources.map((link, idx) => (
+                <li key={idx}><a href={link.href} className="hover:text-primary transition-colors">{link.title}</a></li>
+              ))}
             </ul>
           </div>
           <div>
             <h4 className="font-bold text-foreground mb-6 text-sm">Support</h4>
             <ul className="space-y-4 text-sm text-muted-foreground font-medium">
-              <li><a href="#" className="hover:text-primary transition-colors">Live Chat</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Locate Us</a></li>
-              <li><span className="text-muted-foreground">+1 (800) 123-4567</span></li>
-              <li><a href="mailto:support@skilled4u.com" className="hover:text-primary transition-colors">support@skilled4u.com</a></li>
+              {footerLinks.support.map((link, idx) => (
+                <li key={idx}>
+                  {link.isText ? (
+                    <span className="text-muted-foreground">{link.title}</span>
+                  ) : (
+                    <a href={link.href} className="hover:text-primary transition-colors">{link.title}</a>
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
         </div>

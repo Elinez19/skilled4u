@@ -6,6 +6,7 @@ import {
   SheetTrigger,
   SheetTitle,
 } from "@/components/ui/sheet";
+import { navLinks } from "@/data";
 
 export function Navbar() {
   return (
@@ -23,18 +24,11 @@ export function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 font-medium text-sm text-muted-foreground">
-          <a href="#" className="hover:text-primary transition-colors">
-            Find Pros
-          </a>
-          <a href="#" className="hover:text-primary transition-colors">
-            Become a Pro
-          </a>
-          <a href="#" className="hover:text-primary transition-colors">
-            How it Works
-          </a>
-          <a href="#" className="hover:text-primary transition-colors">
-            About Us
-          </a>
+          {navLinks.map((link, idx) => (
+            <a key={idx} href={link.href} className="hover:text-primary transition-colors">
+              {link.title}
+            </a>
+          ))}
         </nav>
 
         {/* Desktop Buttons */}
@@ -59,18 +53,11 @@ export function Navbar() {
                 Skilled<span className="text-primary">4U</span>
               </SheetTitle>
               <nav className="flex flex-col gap-6 text-lg font-medium text-muted-foreground">
-                <a href="#" className="hover:text-primary transition-colors">
-                  Find Pros
-                </a>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Become a Pro
-                </a>
-                <a href="#" className="hover:text-primary transition-colors">
-                  How it Works
-                </a>
-                <a href="#" className="hover:text-primary transition-colors">
-                  About Us
-                </a>
+                {navLinks.map((link, idx) => (
+                  <a key={idx} href={link.href} className="hover:text-primary transition-colors">
+                    {link.title}
+                  </a>
+                ))}
                 
                 <div className="h-px w-full bg-border/50 my-2"></div>
                 
