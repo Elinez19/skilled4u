@@ -118,30 +118,30 @@ export const servicesList = [
 ];
 
 export const navLinks = [
-  { title: "Find Pros", href: "#" },
+  { title: "Find a Pro", href: "#" },
   { title: "Become a Pro", href: "#" },
+  { title: "Services", href: "#" },
   { title: "How it Works", href: "#" },
-  { title: "About Us", href: "#" },
 ];
 
 export const footerLinks = {
   quickLinks: [
-    { title: "Personal", href: "#" },
-    { title: "Business", href: "#" },
-    { title: "Wealth", href: "#" },
-    { title: "Loans", href: "#" },
+    { title: "Book a Service", href: "#" },
+    { title: "Join as a Pro", href: "#" },
+    { title: "Browse Categories", href: "#" },
+    { title: "Pricing", href: "#" },
     { title: "About Us", href: "#" },
   ],
   resources: [
     { title: "Help Center", href: "#" },
-    { title: "FAQs", href: "#" },
-    { title: "Security", href: "#" },
+    { title: "Safety & Trust", href: "#" },
+    { title: "Pro Guidelines", href: "#" },
     { title: "Blog", href: "#" },
     { title: "Contact Us", href: "#" },
   ],
   support: [
     { title: "Live Chat", href: "#" },
-    { title: "Locate Us", href: "#" },
+    { title: "City Coverage", href: "#" },
     { title: "+1 (800) 123-4567", href: "#", isText: true },
     { title: "support@skilled4u.com", href: "mailto:support@skilled4u.com" },
   ],
