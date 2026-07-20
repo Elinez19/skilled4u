@@ -9,6 +9,7 @@ import { SeamlessSection } from "../components/sections/SeamlessSection";
 import { CtaSection } from "../components/sections/CtaSection";
 import { Newsletter } from "../components/sections/Newsletter";
 import { Footer } from "../components/layout/Footer";
+import { CostEstimates } from "../components/sections/CostEstimates";
 
 export function HomePage() {
   return (
@@ -22,6 +23,7 @@ export function HomePage() {
         <FeatureGrid />
         <SecureSection />
         <SeamlessSection />
+        <CostEstimates />
         <CtaSection />
         <Newsletter />
       </main>
