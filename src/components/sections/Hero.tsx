@@ -16,8 +16,8 @@ export function Hero() {
             className="object-cover w-full h-full object-center"
           />
           {/* Gradient overlay to seamlessly blend the image into the dark left background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/70 to-transparent md:to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent to-transparent md:hidden"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-foreground via-foreground/70 to-transparent md:to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-foreground/80 via-transparent to-transparent md:hidden"></div>
         </div>
 
         {/* Content Wrapper */}
@@ -33,12 +33,12 @@ export function Hero() {
             </Badge>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight drop-shadow-md">
-              The Uber for <br className="hidden md:block"/>
-              <span className="text-primary">Skilled Artisans.</span>
+              Find local professionals <br className="hidden md:block"/>
+              for <span className="text-primary">everything you need</span>
             </h1>
             
             <p className="text-muted text-lg md:text-xl mb-8 max-w-md leading-relaxed drop-shadow-md">
-              Book trusted plumbers, electricians, and carpenters on-demand. Just like calling a ride, but for your home and projects.
+              From cleaning to car repairs to glam makeovers — Skilled4u connects you with the right pros, fast.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
