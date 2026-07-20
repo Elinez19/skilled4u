@@ -4,6 +4,7 @@ import { Sparkles } from "lucide-react";
 import { Navbar } from "../components/layout/Navbar";
 import { Footer } from "../components/layout/Footer";
 import { Newsletter } from "../components/sections/Newsletter";
+import { Link } from "react-router-dom";
 import { nannyServiceTypes, nannyPopularServices, nannySteps } from "../data";
 
 
@@ -28,9 +29,11 @@ export function NannyMaidPage() {
                 Looking for reliable household help? Skilled4u connects you with trusted agencies offering professional nanny and maid services tailored to your needs. Submit a request and receive quotes today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                <Button size="lg" className="btn btn-primary rounded-full px-8 py-6 text-base">
-                  Get Started
-                </Button>
+                <Link to="/register">
+                  <Button size="lg" className="btn btn-primary rounded-full px-8 py-6 text-base">
+                    Get Started
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="w-full md:w-1/2">
@@ -123,9 +126,11 @@ export function NannyMaidPage() {
             <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
               Register Now to get Nanny gigs near you and connect with families who need your professional support.
             </p>
-            <Button size="lg" className="btn btn-primary rounded-full px-10 py-6 text-lg shadow-lg shadow-primary/25">
-              Register as a Pro
-            </Button>
+            <Link to="/pro/register">
+              <Button size="lg" className="btn btn-primary rounded-full px-10 py-6 text-lg shadow-lg shadow-primary/25">
+                Register as a Pro
+              </Button>
+            </Link>
           </div>
         </section>
 
