@@ -1,4 +1,5 @@
 import { Users, Building2, Smile, Award, Shield } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 export function TrustedBy() {
   const stats = [
@@ -68,20 +69,22 @@ export function TrustedBy() {
           </div>
 
           {/* Floating Security Card */}
-          <div className="absolute -bottom-8 -left-4 md:-left-8 bg-card/90 backdrop-blur-xl p-8 rounded-3xl shadow-xl w-[280px] md:w-[320px] border border-border/50">
-            <div className="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
-              <Shield className="w-7 h-7 text-primary" />
-            </div>
-            <h3 className="text-2xl font-bold text-foreground mb-3">
-              Your Security <br /> Is Our Priority
-            </h3>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Bank-grade security to keep your data and payments safe during every transaction.
-            </p>
-            <a href="#" className="text-primary font-semibold text-sm flex items-center hover:text-primary/90 transition-colors">
-              Learn More <span className="ml-2">&rarr;</span>
-            </a>
-          </div>
+          <Card className="absolute -bottom-8 -left-4 md:-left-8 bg-card/90 backdrop-blur-xl rounded-3xl shadow-xl w-[280px] md:w-[320px] border-border/50">
+            <CardContent className="p-8">
+              <div className="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-6">
+                <Shield className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-3">
+                Your Security <br /> Is Our Priority
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                Bank-grade security to keep your data and payments safe during every transaction.
+              </p>
+              <a href="#" className="text-primary font-semibold text-sm flex items-center hover:text-primary/90 transition-colors">
+                Learn More <span className="ml-2">&rarr;</span>
+              </a>
+            </CardContent>
+          </Card>
         </div>
 
       </div>

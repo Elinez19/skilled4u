@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Mail } from "lucide-react";
 
 export function Newsletter() {
@@ -21,10 +22,10 @@ export function Newsletter() {
         
         <div className="w-full md:w-[45%] flex items-center z-10">
           <div className="bg-card p-1.5 rounded-full flex w-full shadow-sm border border-border focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20 transition-all">
-            <input 
+            <Input 
               type="email" 
               placeholder="Enter your email" 
-              className="flex-1 bg-transparent border-none outline-none px-6 text-foreground/90 text-sm placeholder:text-muted-foreground"
+              className="flex-1 bg-transparent border-none shadow-none focus-visible:ring-0 px-6 text-foreground/90 text-sm placeholder:text-muted-foreground h-auto"
             />
             <Button className="btn btn-primary rounded-full px-8 py-5 text-base">
               Subscribe

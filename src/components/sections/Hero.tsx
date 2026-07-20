@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { CheckCircle2, UserCircle } from "lucide-react";
 
 export function Hero() {
   return (
     <section className="px-6 sm:px-10 lg:px-16 pt-6 pb-12 w-full flex justify-center">
       {/* Main container with rounded corners and overflow hidden */}
-      <div className="bg-foreground rounded-[2rem] w-full max-w-7xl relative overflow-hidden min-h-[600px] flex items-center">
+      <div className="bg-foreground rounded-[2rem] w-full max-w-7xl relative overflow-hidden min-h-150 flex items-center">
         
         {/* Background Image positioned to the right half */}
         <div className="absolute top-0 right-0 w-full md:w-[65%] h-full">
@@ -53,19 +55,20 @@ export function Hero() {
 
           {/* Right Side: Floating Glassmorphism Card */}
           <div className="w-full md:w-[45%] flex justify-start md:justify-end mt-16 md:mt-0">
-            <div className="glass rounded-2xl p-6 w-full max-w-[320px] shadow-2xl relative mt-10 md:mt-0">
-              <div className="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
-                <div className="bg-primary/20 p-2 rounded-full text-primary">
-                  <UserCircle size={24} />
+            <Card className="glass rounded-2xl shadow-2xl relative mt-10 md:mt-0 w-full max-w-[320px] bg-transparent border-0 text-white">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
+                  <div className="bg-primary/20 p-2 rounded-full text-primary">
+                    <UserCircle size={24} />
+                  </div>
+                  <div>
+                    <p className="text-white/60 text-xs font-medium uppercase tracking-wider">Welcome Back</p>
+                    <p className="text-white font-semibold text-sm">Michael Barnes</p>
+                  </div>
+                  <Avatar className="ml-auto w-8 h-8">
+                    <AvatarFallback className="bg-white/10 text-white text-xs font-bold">MB</AvatarFallback>
+                  </Avatar>
                 </div>
-                <div>
-                  <p className="text-white/60 text-xs font-medium uppercase tracking-wider">Welcome Back</p>
-                  <p className="text-white font-semibold text-sm">Michael Barnes</p>
-                </div>
-                <div className="ml-auto w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white text-xs font-bold">
-                  MB
-                </div>
-              </div>
 
               <div className="space-y-4 mb-2">
                 <div className="flex justify-between items-center text-sm">
@@ -84,10 +87,11 @@ export function Hero() {
                 </div>
               </div>
 
-              <Button className="w-full mt-6 bg-transparent hover:bg-white/10 text-white border border-white/20 h-10 rounded-xl text-sm font-medium transition-all">
-                View Dashboard &rarr;
-              </Button>
-            </div>
+                <Button className="w-full mt-6 bg-transparent hover:bg-white/10 text-white border border-white/20 h-10 rounded-xl text-sm font-medium transition-all">
+                  View Dashboard &rarr;
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

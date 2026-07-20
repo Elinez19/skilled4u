@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { servicesList } from "@/data";
 
 export function Services() {
@@ -20,9 +21,9 @@ export function Services() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
         {servicesList.map((service, index) => (
-          <div 
+          <Card 
             key={index} 
-            className="border border-border/50 rounded-3xl p-8 hover:shadow-xl hover:border-primary/20 transition-all duration-300 flex flex-col items-start group bg-card"
+            className="rounded-3xl p-8 hover:shadow-xl hover:border-primary/20 transition-all duration-300 flex flex-col items-start group"
           >
             <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               {service.icon}
@@ -34,7 +35,7 @@ export function Services() {
             <a href="#" className="text-primary font-semibold text-sm flex items-center hover:text-primary/90 transition-colors mt-auto">
               Learn More <span className="ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
             </a>
-          </div>
+          </Card>
         ))}
       </div>
       

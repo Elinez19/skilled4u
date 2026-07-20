@@ -1,5 +1,7 @@
 import { Heart, Star } from "lucide-react";
 import { categories, topRated, featured } from "@/data";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 interface Service {
   image: string;
@@ -14,46 +16,49 @@ interface Service {
 
 function ServiceCard({ service }: { service: Service }) {
   return (
-    <div className="bg-card rounded-2xl border border-border/50 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer flex flex-col">
-      <div className="relative h-48 w-full overflow-hidden">
+    <Card className="rounded-2xl border-border/50 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer relative min-h-[320px] flex flex-col justify-end">
+      <div className="absolute inset-0 w-full h-full">
         <img
           src={service.image}
           alt={service.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <button className="absolute top-3 right-3 bg-white p-2 rounded-full shadow-sm text-slate-400 hover:text-primary transition-colors hover:scale-110">
-          <Heart className="w-4 h-4" />
-        </button>
+        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
       </div>
-      <div className="p-5 flex flex-col flex-grow">
-        <h3 className="font-bold text-foreground text-lg mb-2">{service.title}</h3>
+      
+      <Button variant="ghost" size="icon" className="absolute top-3 right-3 bg-white/20 hover:bg-white/40 p-2 rounded-full shadow-sm text-white transition-all hover:scale-110 h-8 w-8 z-10 backdrop-blur-sm">
+        <Heart className="w-4 h-4" />
+      </Button>
+      
+      <CardContent className="p-5 relative z-10 flex flex-col justify-end h-full mt-auto">
+        <h3 className="font-bold text-white text-lg mb-2">{service.title}</h3>
         <div className="flex items-center text-sm mb-4">
           <span className="text-primary font-bold">{service.price}</span>
-          <span className="text-muted-foreground mx-1.5">•</span>
-          <span className="text-muted-foreground">({service.duration})</span>
+          <span className="text-white/70 mx-1.5">•</span>
+          <span className="text-white/90">({service.duration})</span>
         </div>
 
         <div className="flex items-center mt-auto mb-4">
           <img
             src={service.avatar}
             alt={service.name}
-            className="w-6 h-6 rounded-full mr-2 border border-border"
+            className="w-6 h-6 rounded-full mr-2 border border-white/30"
           />
-          <span className="text-primary text-sm font-semibold">{service.name}</span>
+          <span className="text-white text-sm font-semibold">{service.name}</span>
         </div>
 
         <div className="flex items-center gap-1">
-          <div className="flex text-slate-200">
+          <div className="flex text-yellow-400">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-3.5 h-3.5 fill-current" />
             ))}
           </div>
-          <span className="text-xs text-foreground font-bold ml-1">
-            {service.rating} <span className="text-muted-foreground font-normal">({service.reviews} Review)</span>
+          <span className="text-xs text-white font-bold ml-1">
+            {service.rating} <span className="text-white/70 font-normal">({service.reviews} Review)</span>
           </span>
         </div>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
 }
 

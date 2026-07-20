@@ -1,4 +1,6 @@
 import { costEstimates } from "../../data";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 export function CostEstimates() {
   return (
@@ -13,7 +15,7 @@ export function CostEstimates() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {costEstimates.map((estimate, index) => (
-            <div key={index} className="bg-white rounded-xl overflow-hidden border border-slate-200 hover:shadow-lg transition-shadow">
+            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
               <div className="aspect-4/3 w-full relative">
                 <img 
                   src={estimate.image} 
@@ -21,7 +23,7 @@ export function CostEstimates() {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
-              <div className="p-6">
+              <CardContent className="p-6">
                 <h3 className="font-semibold text-lg mb-4">{estimate.title}</h3>
                 <p className="text-slate-500 text-sm mb-4">
                   <span className="text-slate-700 font-medium">{estimate.priceRange}</span> <span className="text-slate-400">{estimate.condition}</span>
@@ -29,15 +31,15 @@ export function CostEstimates() {
                 <a href={estimate.link} className="text-blue-500 hover:text-blue-600 text-sm font-medium transition-colors">
                   Read more &raquo;
                 </a>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
         <div className="flex justify-center">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-medium px-8 py-3 rounded-md transition-colors">
+          <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white font-medium px-8 transition-colors">
             View All Cost Estimates
-          </button>
+          </Button>
         </div>
       </div>
     </section>
