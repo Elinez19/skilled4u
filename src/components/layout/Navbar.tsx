@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+
 import {
   Sheet,
   SheetContent,
@@ -7,12 +8,13 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { navLinks } from "@/data";
+import { Link } from "react-router";
 
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-100">
       <div className="container mx-auto px-6 sm:px-10 lg:px-16 max-w-7xl h-20 flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           {/* Logo Placeholder */}
           <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">
             S
@@ -20,7 +22,7 @@ export function Navbar() {
           <span className="font-bold text-xl tracking-tight text-foreground">
             Skilled<span className="text-primary">4U</span>
           </span>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 font-medium text-sm text-muted-foreground">

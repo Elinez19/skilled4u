@@ -48,7 +48,7 @@ export const categories = [
 export const topRated = [
   {
     image: imgElec1,
-    title: "Home Theater Setup",
+    title: "Professional Electrician",
     price: "$12.00",
     duration: "26 Min",
     avatar: avatar1,
@@ -58,7 +58,7 @@ export const topRated = [
   },
   {
     image: imgClean2,
-    title: "Garment Restoration",
+    title: "Professional Cleaner",
     price: "$42.00",
     duration: "25 Min",
     avatar: avatar2,
@@ -68,7 +68,7 @@ export const topRated = [
   },
   {
     image: imgClean3,
-    title: "Family Style Dinner Chef",
+    title: "Professional Plumber",
     price: "$32.00",
     duration: "20 Min",
     avatar: avatar3,
@@ -81,7 +81,7 @@ export const topRated = [
 export const featured = [
   {
     image: imgClean4,
-    title: "Carpet Cleaning",
+    title: "Cleaning Services",
     price: "$40.00",
     duration: "19 Min",
     avatar: avatar4,
@@ -91,7 +91,7 @@ export const featured = [
   },
   {
     image: imgClean5,
-    title: "Ceiling and Wall Cleaning",
+    title: "Home Deep Cleaning",
     price: "$26.00",
     duration: "50 Min",
     avatar: avatar5,
@@ -101,7 +101,7 @@ export const featured = [
   },
   {
     image: imgCarp1,
-    title: "Cabinet Fix & Refinish",
+    title: "Professional Carpentry",
     price: "$20.00",
     duration: "20 Min",
     avatar: avatar6,
@@ -119,8 +119,8 @@ export const servicesList = [
   },
   {
     icon: <Zap className="w-6 h-6 text-primary" />,
-    title: "Electrical Works",
-    description: "Safe and reliable electrical installations and troubleshooting.",
+    title: "Professional Carpentry",
+    description: "Safe and reliable carpentry services and installations.",
   },
   {
     icon: <Droplets className="w-6 h-6 text-primary" />,
@@ -180,9 +180,9 @@ export const costEstimates = [
   },
   {
     image: imgCarp2,
-    title: "Truck Hire and Rental",
+    title: "Professional Carpentry",
     priceRange: "₦100,000 - ₦150,000",
-    condition: "(for medium trucks moving between states)",
+    condition: "(for basic carpentry services)",
     link: "#",
   },
   {
@@ -194,37 +194,37 @@ export const costEstimates = [
   },
   {
     image: imgPainter1,
-    title: "Swimming Pool Construction",
+    title: "Painting and Decorating",
     priceRange: "₦1,500,000 - ₦3,000,000",
-    condition: "for basic types",
+    condition: "for basic painting services",
     link: "#",
   },
   {
     image: imgHair,
-    title: "Printing Press Service",
+    title: "HairStylist And MakeUp Artiste",
     priceRange: "₦10,000 - ₦50,000",
-    condition: "(for flyers, brochures and similar documents)",
+    condition: "for basic hair styling and makeup",
     link: "#",
   },
   {
     image: imgClean7,
-    title: "Ushering Services",
+    title: "Professional Cleaning",
     priceRange: "₦10,000 - ₦20,000",
-    condition: "(for weddings in cities like Lagos)",
+    condition: "for basic cleaning services",
     link: "#",
   },
   {
     image: imgElec2,
-    title: "Phone Repair",
+    title: "Electronics Repair",
     priceRange: "₦10,000 - ₦20,000",
-    condition: "(for most basic repairs)",
+    condition: "for basic electronics repair",
     link: "#",
   },
   {
     image: imgHair1,
-    title: "Swedish Massage",
+    title: "Hair Styling and Makeup Artiste",
     priceRange: "₦15,000 - ₦40,000",
-    condition: "(for a 60-minute massage)",
+    condition: "for basic hair styling and makeup",
     link: "#",
   },
 ];
