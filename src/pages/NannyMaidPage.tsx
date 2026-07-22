@@ -6,6 +6,7 @@ import { Footer } from "../components/layout/Footer";
 import { Newsletter } from "../components/sections/Newsletter";
 import { Link } from "react-router-dom";
 import { nannyServiceTypes, nannyPopularServices, nannySteps } from "../data";
+import nannyImg from "@/assets/professional-cleaner-8.jpg";
 
 
 
@@ -39,7 +40,7 @@ export function NannyMaidPage() {
             <div className="w-full md:w-1/2">
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" 
+                  src={nannyImg} 
                   alt="Nanny and child" 
                   className="w-full h-auto object-cover aspect-4/3"
                 />

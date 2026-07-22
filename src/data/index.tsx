@@ -1,5 +1,27 @@
 import { Fan, ChefHat, Paintbrush, Wrench, Zap, Droplets, Sparkles, Hammer, Baby, Home, HeartHandshake, Clock, ClipboardList, MessageSquareText, UserCheck } from "lucide-react";
 
+import imgElec1 from "@/assets/professional-electrician-1.jpg";
+import imgClean2 from "@/assets/professional-cleaner-2.jpg";
+import imgClean3 from "@/assets/professional-cleaner-3.jpg";
+import imgClean4 from "@/assets/professional-cleaner-4.jpg";
+import imgClean5 from "@/assets/professional-cleaner-5.jpg";
+import imgCarp1 from "@/assets/professional-carpenter-1.jpg";
+import imgClean6 from "@/assets/professional-cleaner-6.jpg";
+import imgCarp2 from "@/assets/professional-carpenter-2.jpg";
+import imgHome from "@/assets/home-interior.jpg";
+import imgPainter1 from "@/assets/a-painter-1.jpg";
+import imgHair from "@/assets/professional-hair-stylist.jpg";
+import imgClean7 from "@/assets/professional-cleaner-7.jpg";
+import imgElec2 from "@/assets/professional-electrician-2.jpg";
+import imgHair1 from "@/assets/professional-hair-stylist-1.jpg";
+
+import avatar1 from "@/assets/a-painter-2.jpg";
+import avatar2 from "@/assets/a-painter-3.jpg";
+import avatar3 from "@/assets/a-painter-4.jpg";
+import avatar4 from "@/assets/a-painter-5.jpg";
+import avatar5 from "@/assets/a-painter-6.jpg";
+import avatar6 from "@/assets/a-painter-7.jpg";
+
 export const categories = [
   {
     icon: <Fan className="w-8 h-8 text-primary" />,
@@ -25,31 +47,31 @@ export const categories = [
 
 export const topRated = [
   {
-    image: "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=500&auto=format&fit=crop&q=60",
+    image: imgElec1,
     title: "Home Theater Setup",
     price: "$12.00",
     duration: "26 Min",
-    avatar: "https://i.pravatar.cc/150?u=1",
+    avatar: avatar1,
     name: "Jennifer Davis",
     reviews: 0,
     rating: 0,
   },
   {
-    image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=500&auto=format&fit=crop&q=60",
+    image: imgClean2,
     title: "Garment Restoration",
     price: "$42.00",
     duration: "25 Min",
-    avatar: "https://i.pravatar.cc/150?u=2",
+    avatar: avatar2,
     name: "Jennifer Davis",
     reviews: 0,
     rating: 0,
   },
   {
-    image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=500&auto=format&fit=crop&q=60",
+    image: imgClean3,
     title: "Family Style Dinner Chef",
     price: "$32.00",
     duration: "20 Min",
-    avatar: "https://i.pravatar.cc/150?u=3",
+    avatar: avatar3,
     name: "Jennifer Davis",
     reviews: 0,
     rating: 0,
@@ -58,31 +80,31 @@ export const topRated = [
 
 export const featured = [
   {
-    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500&auto=format&fit=crop&q=60",
+    image: imgClean4,
     title: "Carpet Cleaning",
     price: "$40.00",
     duration: "19 Min",
-    avatar: "https://i.pravatar.cc/150?u=4",
+    avatar: avatar4,
     name: "Felix Harris",
     reviews: 0,
     rating: 0,
   },
   {
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=500&auto=format&fit=crop&q=60",
+    image: imgClean5,
     title: "Ceiling and Wall Cleaning",
     price: "$26.00",
     duration: "50 Min",
-    avatar: "https://i.pravatar.cc/150?u=5",
+    avatar: avatar5,
     name: "Jennifer Davis",
     reviews: 0,
     rating: 0,
   },
   {
-    image: "https://images.unsplash.com/photo-1581141849291-1125c7b692b5?w=500&auto=format&fit=crop&q=60",
+    image: imgCarp1,
     title: "Cabinet Fix & Refinish",
     price: "$20.00",
     duration: "20 Min",
-    avatar: "https://i.pravatar.cc/150?u=6",
+    avatar: avatar6,
     name: "Jennifer Davis",
     reviews: 0,
     rating: 0,
@@ -150,56 +172,56 @@ export const footerLinks = {
 
 export const costEstimates = [
   {
-    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500&auto=format&fit=crop&q=60",
+    image: imgClean6,
     title: "House Cleaning",
     priceRange: "₦27,000 - ₦37,000",
     condition: "(for a 2 bedroom flat)",
     link: "#",
   },
   {
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=500&auto=format&fit=crop&q=60",
+    image: imgCarp2,
     title: "Truck Hire and Rental",
     priceRange: "₦100,000 - ₦150,000",
     condition: "(for medium trucks moving between states)",
     link: "#",
   },
   {
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&auto=format&fit=crop&q=60",
+    image: imgHome,
     title: "Website Development",
     priceRange: "₦100,000 - ₦200,000",
     condition: "(for basic websites)",
     link: "#",
   },
   {
-    image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=500&auto=format&fit=crop&q=60",
+    image: imgPainter1,
     title: "Swimming Pool Construction",
     priceRange: "₦1,500,000 - ₦3,000,000",
     condition: "for basic types",
     link: "#",
   },
   {
-    image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=500&auto=format&fit=crop&q=60",
+    image: imgHair,
     title: "Printing Press Service",
     priceRange: "₦10,000 - ₦50,000",
     condition: "(for flyers, brochures and similar documents)",
     link: "#",
   },
   {
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop&q=60",
+    image: imgClean7,
     title: "Ushering Services",
     priceRange: "₦10,000 - ₦20,000",
     condition: "(for weddings in cities like Lagos)",
     link: "#",
   },
   {
-    image: "https://images.unsplash.com/photo-1597740985671-2a8a3b80502e?w=500&auto=format&fit=crop&q=60",
+    image: imgElec2,
     title: "Phone Repair",
     priceRange: "₦10,000 - ₦20,000",
     condition: "(for most basic repairs)",
     link: "#",
   },
   {
-    image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=500&auto=format&fit=crop&q=60",
+    image: imgHair1,
     title: "Swedish Massage",
     priceRange: "₦15,000 - ₦40,000",
     condition: "(for a 60-minute massage)",

@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { CheckCircle2, UserCircle } from "lucide-react";
+import heroImage from "@/assets/professional-cleaner-1.jpg";
 
 export function Hero() {
   return (
@@ -13,7 +14,7 @@ export function Hero() {
         {/* Background Image positioned to the right half */}
         <div className="absolute top-0 right-0 w-full md:w-[65%] h-full">
           <img 
-            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80" 
+            src={heroImage} 
             alt="Person booking an artisan service" 
             className="object-cover w-full h-full object-center"
           />

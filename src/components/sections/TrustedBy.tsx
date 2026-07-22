@@ -1,5 +1,6 @@
 import { Users, Building2, Smile, Award, Shield } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import trustedImg from "@/assets/professional-cleaner-1.jpg";
 
 export function TrustedBy() {
   const stats = [
@@ -61,7 +62,7 @@ export function TrustedBy() {
         <div className="w-full lg:w-1/2 relative mt-12 lg:mt-0">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] w-full max-w-xl ml-auto">
             <img 
-              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=80" 
+              src={trustedImg} 
               alt="Professional artisans at work" 
               className="object-cover w-full h-full"
             />
