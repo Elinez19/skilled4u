@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Plug, Droplets, Snowflake, Sofa, Truck, Sparkles } from "lucide-react";
+import { ServiceBookingModal } from "@/components/ServiceBookingModal";
 
 export function WhatWeDo() {
   const services = [
@@ -36,7 +37,7 @@ export function WhatWeDo() {
   ];
 
   return (
-    <section className="py-20 px-6 sm:px-10 lg:px-16 w-full max-w-7xl mx-auto bg-slate-50">
+    <section id="services" className="py-20 px-6 sm:px-10 lg:px-16 w-full max-w-7xl mx-auto bg-slate-50">
       <div className="text-center mb-16">
         <h2 className="text-sm font-bold text-primary uppercase tracking-wider mb-2">What We Do</h2>
         <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -60,9 +61,11 @@ export function WhatWeDo() {
             <p className="text-muted-foreground mb-8 flex-grow leading-relaxed">
               {service.description}
             </p>
-            <Button variant="ghost" className="mt-auto text-primary hover:text-primary/90 hover:bg-primary/5 p-0 h-auto font-semibold group">
-              Book Now <span className="ml-2 group-hover:translate-x-1 transition-transform">&gt;</span>
-            </Button>
+            <ServiceBookingModal>
+              <Button variant="ghost" className="mt-auto text-primary hover:text-primary/90 hover:bg-primary/5 p-0 h-auto font-semibold group">
+                Book Now <span className="ml-2 group-hover:translate-x-1 transition-transform">&gt;</span>
+              </Button>
+            </ServiceBookingModal>
           </div>
         ))}
       </div>

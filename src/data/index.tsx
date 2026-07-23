@@ -140,11 +140,11 @@ export const servicesList = [
 ];
 
 export const navLinks = [
-  { title: "Find a Pro", href: "#" },
-  { title: "Become a Pro", href: "/#join-pro" },
-  { title: "Services", href: "#" },
+  { title: "Home", href: "/" },
+  { title: "Services", href: "/#services" },
+  { title: "How it Works", href: "/#how-it-works" },
   { title: "Nanny Services", href: "/nanny-and-maid-services" },
-  { title: "How it Works", href: "#" },
+  { title: "Become a Pro", href: "/#join-pro" },
 ];
 
 export const footerLinks = {
@@ -187,9 +187,9 @@ export const costEstimates = [
   },
   {
     image: imgHome,
-    title: "Website Development",
-    priceRange: "₦100,000 - ₦200,000",
-    condition: "(for basic websites)",
+    title: "Home Deep Cleaning",
+    priceRange: "₦50,000 - ₦150,000",
+    condition: "(for standard apartment)",
     link: "#",
   },
   {

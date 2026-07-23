@@ -33,7 +33,7 @@ export function StepsSection() {
   ];
 
   return (
-    <section className="py-24 px-6 sm:px-10 lg:px-16 w-full max-w-7xl mx-auto bg-slate-50/50 rounded-[2.5rem] my-12">
+    <section id="how-it-works" className="py-24 px-6 sm:px-10 lg:px-16 w-full max-w-7xl mx-auto bg-slate-50/50 rounded-[2.5rem] my-12">
       <div className="text-center max-w-3xl mx-auto mb-16">
         <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
           How It <span className="text-primary">Works</span>

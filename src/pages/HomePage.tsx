@@ -10,7 +10,7 @@ import { CtaSection } from "../components/sections/CtaSection";
 import { JoinAsPro } from "../components/sections/JoinAsPro";
 import { Newsletter } from "../components/sections/Newsletter";
 import { Footer } from "../components/layout/Footer";
-import { CostEstimates } from "../components/sections/CostEstimates";
+import { ServicesCard } from "../components/sections/ServicesCard";
 
 export function HomePage() {
   return (
@@ -24,7 +24,7 @@ export function HomePage() {
         <FeatureGrid />
         <InfoSection />
         <SeamlessSection />
-        <CostEstimates />
+        <ServicesCard />
         <JoinAsPro />
         <CtaSection />
         <Newsletter />
