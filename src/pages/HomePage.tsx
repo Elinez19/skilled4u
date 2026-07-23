@@ -1,12 +1,12 @@
 import { Navbar } from "../components/layout/Navbar";
 import { Hero } from "../components/sections/Hero";
 import { TrustedBy } from "../components/sections/TrustedBy";
-import { ServiceCategories } from "../components/sections/ServiceCategories";
-import { Services } from "../components/sections/Services";
+import { WhatWeDo } from "../components/sections/WhatWeDo";
 import { FeatureGrid } from "../components/sections/FeatureGrid";
 import { SecureSection } from "../components/sections/SecureSection";
 import { SeamlessSection } from "../components/sections/SeamlessSection";
 import { CtaSection } from "../components/sections/CtaSection";
+import { JoinAsPro } from "../components/sections/JoinAsPro";
 import { Newsletter } from "../components/sections/Newsletter";
 import { Footer } from "../components/layout/Footer";
 import { CostEstimates } from "../components/sections/CostEstimates";
@@ -18,12 +18,12 @@ export function HomePage() {
       <main className="flex flex-col items-center overflow-hidden">
         <Hero />
         <TrustedBy />
-        <ServiceCategories />
-        <Services />
+        <WhatWeDo />
         <FeatureGrid />
         <SecureSection />
         <SeamlessSection />
         <CostEstimates />
+        <JoinAsPro />
         <CtaSection />
         <Newsletter />
       </main>

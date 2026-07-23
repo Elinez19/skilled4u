@@ -141,7 +141,7 @@ export const servicesList = [
 
 export const navLinks = [
   { title: "Find a Pro", href: "#" },
-  { title: "Become a Pro", href: "#" },
+  { title: "Become a Pro", href: "/#join-pro" },
   { title: "Services", href: "#" },
   { title: "Nanny Services", href: "/nanny-and-maid-services" },
   { title: "How it Works", href: "#" },

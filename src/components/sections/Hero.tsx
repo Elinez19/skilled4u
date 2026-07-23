@@ -32,21 +32,21 @@ export function Hero() {
               variant="outline" 
               className="mb-6 border-white/20 text-white bg-white/5 hover:bg-white/10 px-4 py-1.5 text-sm font-medium rounded-full backdrop-blur-sm"
             >
-              On-Demand Skilled Professionals
+              On-Demand Verified Artisans
             </Badge>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 tracking-tight drop-shadow-md">
-              Find local professionals <br className="hidden md:block"/>
+              Find local artisans <br className="hidden md:block"/>
               for <span className="text-primary">everything you need</span>
             </h1>
             
             <p className="text-muted text-lg md:text-xl mb-8 max-w-md leading-relaxed drop-shadow-md">
-              From cleaning to car repairs to glam makeovers — Skilled4u connects you with the right pros, fast.
+              From cleaners, plumbers, electricians, mechanics to carpenters and more — Skilled4u connects you with the right verified artisans, fast.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Button size="lg" className="btn btn-primary rounded-full px-8 py-6 text-base">
-                Book a Pro Now &rarr;
+                Book an Artisan Now &rarr;
               </Button>
               <Button size="lg" variant="outline" className="btn btn-outline border-white/20 text-white hover:bg-white/10 hover:text-white bg-transparent rounded-full px-8 py-6 text-base backdrop-blur-sm">
                 Explore Services
