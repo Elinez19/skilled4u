@@ -2,6 +2,7 @@ import { Navbar } from "../components/layout/Navbar";
 import { Hero } from "../components/sections/Hero";
 import { TrustedBy } from "../components/sections/TrustedBy";
 import { WhatWeDo } from "../components/sections/WhatWeDo";
+import { StepsSection } from "../components/sections/StepsSection";
 import { FeatureGrid } from "../components/sections/FeatureGrid";
 import { InfoSection } from "../components/sections/InfoSection";
 import { SeamlessSection } from "../components/sections/SeamlessSection";
@@ -19,6 +20,7 @@ export function HomePage() {
         <Hero />
         <TrustedBy />
         <WhatWeDo />
+        <StepsSection />
         <FeatureGrid />
         <InfoSection />
         <SeamlessSection />
