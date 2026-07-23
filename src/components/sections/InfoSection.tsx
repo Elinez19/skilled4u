@@ -1,12 +1,13 @@
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import infoImg from "@/assets/professional-plumber-1.jpg";
 
-export function SecureSection() {
+export function InfoSection() {
   const points = [
-    "256-bit SSL encryption",
-    "Verified professional backgrounds",
-    "Secure escrow payments",
-    "Satisfaction guarantee",
+    "Find an Artisan",
+    "Book a Service",
+    "Track Your Request",
+    "Satisfaction Guarantee",
   ];
 
   return (
@@ -18,7 +19,7 @@ export function SecureSection() {
             <span className="text-primary">Ready to Work</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg mb-8">
-            Advanced screening and rating systems to ensure you only get the best.
+            Advanced screening and rating systems to ensure you only get the best artisans for your home or office.
           </p>
 
           <ul className="space-y-4 mb-8">
@@ -38,11 +39,13 @@ export function SecureSection() {
         </div>
 
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-          <div className="bg-primary/10 rounded-3xl p-12 w-full max-w-md aspect-square flex items-center justify-center relative shadow-sm border border-primary/20">
-            <div className="w-40 h-56 bg-gradient-to-b from-primary/80 to-primary rounded-2xl shadow-2xl relative flex items-center justify-center">
-                <div className="w-16 h-20 border-8 border-border absolute -top-10 rounded-t-full shadow-inner"></div>
-                <div className="w-6 h-10 bg-primary/90 rounded-full shadow-inner"></div>
-            </div>
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-square w-full max-w-md">
+            <img 
+              src={infoImg} 
+              alt="Safe and vetted professional" 
+              className="object-cover w-full h-full"
+            />
+            <div className="absolute inset-0 bg-foreground/10"></div>
           </div>
         </div>
       </div>

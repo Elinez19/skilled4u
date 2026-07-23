@@ -5,7 +5,7 @@ export function FeatureGrid() {
     {
       icon: <Briefcase className="w-6 h-6 text-primary" />,
       title: "Instant Matching",
-      description: "Match with nearby skilled professionals instantly.",
+      description: "Match with nearby verified artisans instantly.",
     },
     {
       icon: <Clock className="w-6 h-6 text-primary" />,
@@ -20,7 +20,7 @@ export function FeatureGrid() {
     {
       icon: <Star className="w-6 h-6 text-primary" />,
       title: "Live Tracking",
-      description: "Watch your pro arrive in real-time on the map.",
+      description: "Watch your artisan arrive in real-time on the map.",
     },
   ];
 
@@ -33,7 +33,7 @@ export function FeatureGrid() {
           <span className="text-primary">Seamless</span> Experience
         </h2>
         <p className="text-muted-foreground leading-relaxed text-lg">
-          The gig economy for skilled trades, built for your convenience.
+          The gig economy for verified artisans, built for your convenience.
         </p>
       </div>
 
