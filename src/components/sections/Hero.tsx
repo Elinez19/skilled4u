@@ -2,32 +2,77 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { CheckCircle2, UserCircle } from "lucide-react";
-import heroImage from "@/assets/professional-cleaner-1.jpg";
+import { CheckCircle2, UserCircle, ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useCallback, useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+
+import cleanerImg from "@/assets/professional-cleaner-1.jpg";
+import electricianImg from "@/assets/professional-electrician-1.jpg";
+import plumberImg from "@/assets/professional-plumber-1.jpg";
+import carpenterImg from "@/assets/professional-carpenter-1.jpg";
+
+const heroImages = [
+  { id: 1, src: cleanerImg, alt: "Professional Cleaner" },
+  { id: 2, src: electricianImg, alt: "Professional Electrician" },
+  { id: 3, src: plumberImg, alt: "Professional Plumber" },
+  { id: 4, src: carpenterImg, alt: "Professional Carpenter" },
+];
 
 export function Hero() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000, stopOnInteraction: false })]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi, setSelectedIndex]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+  }, [emblaApi, onSelect]);
+
   return (
-    <section className="px-6 sm:px-10 lg:px-16 pt-6 pb-12 w-full flex justify-center">
-      {/* Main container with rounded corners and overflow hidden */}
-      <div className="bg-foreground rounded-[2rem] w-full max-w-7xl relative overflow-hidden min-h-150 flex items-center">
+    <section className="w-full h-screen flex justify-center relative">
+      {/* Main container full screen */}
+      <div className="bg-primary w-full relative overflow-hidden h-full flex items-center">
         
-        {/* Background Image positioned to the right half */}
-        <div className="absolute top-0 right-0 w-full md:w-[65%] h-full">
-          <img 
-            src={heroImage} 
-            alt="Person booking an artisan service" 
-            className="object-cover w-full h-full object-center"
-          />
-          {/* Gradient overlay to seamlessly blend the image into the dark left background */}
-          <div className="absolute inset-0 bg-linear-to-r from-foreground via-foreground/70 to-transparent md:to-transparent"></div>
-          <div className="absolute inset-0 bg-linear-to-t from-foreground/80 via-transparent to-transparent md:hidden"></div>
+        {/* Background Image Carousel positioned to cover full screen */}
+        <div className="absolute inset-0 w-full h-full">
+          <div className="overflow-hidden w-full h-full" ref={emblaRef}>
+            <div className="flex h-full w-full">
+              {heroImages.map((image) => (
+                <div className="flex-[0_0_100%] min-w-0 h-full relative" key={image.id}>
+                  <img 
+                    src={image.src} 
+                    alt={image.alt} 
+                    className="object-cover w-full h-full object-center"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* Very dark overlay */}
+          <div className="absolute inset-0 bg-slate-950/80 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/50 to-slate-950/90 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-primary/10 mix-blend-color pointer-events-none"></div>
         </div>
 
         {/* Content Wrapper */}
-        <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-between p-8 md:p-16 lg:p-20">
+        <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between p-8 md:p-16 lg:p-20 pointer-events-none h-full">
           
           {/* Left Side: Text and Buttons */}
-          <div className="w-full md:w-[55%] flex flex-col items-start">
+          <div className="w-full md:w-[55%] flex flex-col items-start pointer-events-auto">
             <Badge 
               variant="outline" 
               className="mb-6 border-white/20 text-white bg-white/5 hover:bg-white/10 px-4 py-1.5 text-sm font-medium rounded-full backdrop-blur-sm"
@@ -54,9 +99,9 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right Side: Floating Glassmorphism Card */}
-          <div className="w-full md:w-[45%] flex justify-start md:justify-end mt-16 md:mt-0">
-            <Card className="glass rounded-2xl shadow-2xl relative mt-10 md:mt-0 w-full max-w-[320px] bg-transparent border-0 text-white">
+          {/* Right Side: Floating Glassmorphism Card and Carousel Controls */}
+          <div className="w-full md:w-[45%] flex flex-col items-start md:items-end justify-center mt-16 md:mt-0 relative h-full min-h-[300px]">
+            <Card className="glass rounded-2xl shadow-2xl relative mt-10 md:mt-0 w-full max-w-[320px] bg-transparent border-0 text-white pointer-events-auto">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
                   <div className="bg-primary/20 p-2 rounded-full text-primary">
@@ -94,6 +139,34 @@ export function Hero() {
               </CardContent>
             </Card>
           </div>
+        </div>
+        
+        {/* Slider Controls - Centered at the bottom */}
+        <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-4 z-20 pointer-events-auto">
+          <button 
+            onClick={scrollPrev}
+            className="bg-white/5 hover:bg-white/10 text-white p-2.5 rounded-full backdrop-blur-md transition-all border border-white/10"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft size={20} />
+          </button>
+          <div className="flex gap-2">
+            {heroImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => emblaApi?.scrollTo(index)}
+                aria-label={`Go to slide ${index + 1}`}
+                className={`h-2 rounded-full transition-all ${index === selectedIndex ? "w-8 bg-primary" : "w-2 bg-white/40 hover:bg-white/60"}`}
+              />
+            ))}
+          </div>
+          <button 
+            onClick={scrollNext}
+            className="bg-white/5 hover:bg-white/10 text-white p-2.5 rounded-full backdrop-blur-md transition-all border border-white/10"
+            aria-label="Next slide"
+          >
+            <ChevronRight size={20} />
+          </button>
         </div>
       </div>
     </section>

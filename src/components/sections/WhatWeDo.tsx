@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Plug, Droplets, Snowflake, Sofa, Truck } from "lucide-react";
+import { Plug, Droplets, Snowflake, Sofa, Truck, Sparkles } from "lucide-react";
 
 export function WhatWeDo() {
   const services = [
@@ -27,6 +27,11 @@ export function WhatWeDo() {
       icon: <Truck className="w-8 h-8" />,
       title: "Moving & Relocation",
       description: "Professional home and office movers for packing, loading, and delivery - anywhere in Nigeria."
+    },
+    {
+      icon: <Sparkles className="w-8 h-8" />,
+      title: "Cleaning, Laundry & Fumigation",
+      description: "Professional deep cleaning, post-construction cleanup, laundry services, and fumigation for homes and offices."
     }
   ];
 
