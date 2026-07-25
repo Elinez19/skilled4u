@@ -6,7 +6,7 @@ export function StepsSection() {
       number: "01",
       title: "Select Service & Location",
       description:
-        "Tell us what needs to be installed, repaired, or maintained and where you are located. We proudly cover all states across Nigeria.",
+        "Tell us what needs to be installed, repaired, or maintained and where you are located. We proudly cover all states.",
       icon: <MapPin className="w-6 h-6 text-primary" />,
     },
     {

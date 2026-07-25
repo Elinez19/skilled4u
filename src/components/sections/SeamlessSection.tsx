@@ -18,7 +18,7 @@ export function SeamlessSection() {
             <span className="text-primary">Get it Done</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg mb-8">
-            The fastest way to hire skilled artisans and technicians across Nigeria, right when you need them.
+            The fastest way to hire skilled artisans and technicians, right when you need them.
           </p>
 
           <ul className="space-y-4 mb-8">

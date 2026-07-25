@@ -26,7 +26,7 @@ export function WhatWeDo() {
     {
       icon: <Truck className="w-8 h-8" />,
       title: "Moving & Relocation",
-      description: "Professional home and office movers for packing, loading, and delivery - anywhere in Nigeria."
+      description: "Professional home and office movers for packing, loading, and delivery."
     },
     {
       icon: <Sparkles className="w-8 h-8" />,
@@ -43,7 +43,7 @@ export function WhatWeDo() {
           Every Service Your Home Needs
         </h3>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          From emergency repairs to scheduled maintenance - skilled4U connects you to Nigeria's most trusted artisans & technicians
+          From emergency repairs to scheduled maintenance - skilled4U connects you to the most trusted artisans & technicians
         </p>
       </div>
 
