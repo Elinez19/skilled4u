@@ -8,7 +8,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { navLinks, servicesList } from "@/data";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import { Input } from "@/components/ui/input";
 import { useState, useRef, useEffect } from "react";
 import { SearchServiceModal } from "@/components/sections/SearchServiceModal";
