@@ -1,11 +1,10 @@
-
 export function ServicesHero() {
   return (
     <section className="relative w-full bg-slate-900 py-24 px-6 sm:px-10 lg:px-16 overflow-hidden">
       {/* Background styling elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -right-1/4 w-[1000px] h-[1000px] rounded-full bg-primary/10 blur-3xl opacity-50 pointer-events-none" />
-        <div className="absolute -bottom-1/2 -left-1/4 w-[800px] h-[800px] rounded-full bg-emerald-500/10 blur-3xl opacity-30 pointer-events-none" />
+        <div className="absolute -top-1/2 -right-1/4 w-250 h-250 rounded-full bg-primary/10 blur-3xl opacity-50 pointer-events-none" />
+        <div className="absolute -bottom-1/2 -left-1/4 w-200 h-200 rounded-full bg-emerald-500/10 blur-3xl opacity-30 pointer-events-none" />
       </div>
 
       <div className="container mx-auto max-w-7xl relative z-10 flex flex-col items-center text-center">

@@ -9,7 +9,7 @@ export function BecomeArtisanPage() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-emerald-100 flex flex-col">
       <Navbar />
-      <main className="flex-grow flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <main className="grow flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-2xl bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
           
           <div className="bg-primary relative h-20 w-full flex items-center px-6 overflow-hidden shadow-[inset_0_4px_20px_rgba(0,0,0,0.1)]">

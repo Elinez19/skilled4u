@@ -98,7 +98,7 @@ export function Navbar() {
 
           {/* Autocomplete Dropdown */}
           {isDropdownOpen && searchQuery && (
-            <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-lg border border-gray-100 py-2 max-h-[300px] overflow-y-auto">
+            <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-lg border border-gray-100 py-2 max-h-75 overflow-y-auto">
               {filteredServices.length > 0 ? (
                 filteredServices.map((service, idx) => (
                   <button
@@ -133,21 +133,25 @@ export function Navbar() {
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle menu</span>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <SheetTitle className="text-left font-bold text-xl tracking-tight text-foreground mb-8 border-b pb-4">
+            <SheetContent side="right" className="w-75 sm:w-100">
+              <SheetTitle className="text-left font-bold text-xl tracking-tight text-foreground mb-8 border-b pb-4 px-4">
                 Skilled<span className="text-primary">4U</span>
               </SheetTitle>
-              <nav className="flex flex-col gap-6 text-lg font-medium text-muted-foreground">
+              <nav className="flex flex-col gap-2 mt-2">
                 {navLinks.map((link, idx) => (
-                  <a key={idx} href={link.href} className="hover:text-primary transition-colors">
+                  <a 
+                    key={idx} 
+                    href={link.href} 
+                    className="px-4 py-3 rounded-xl text-lg font-medium text-foreground hover:bg-primary/5 hover:text-primary focus:outline-none focus:bg-primary/5 focus:text-primary transition-all duration-200"
+                  >
                     {link.title}
                   </a>
                 ))}
                 
-                <div className="h-px w-full bg-border/50 my-2"></div>
+                <div className="h-px w-full bg-border/50 my-4"></div>
                 
-                <Link to="/book" className="w-full">
-                  <Button className="btn btn-primary rounded-full w-full py-6 text-base">
+                <Link to="/book" className="w-full mt-2">
+                  <Button className="btn btn-primary rounded-full w-full py-6 text-base font-semibold shadow-md hover:shadow-lg transition-all duration-200">
                     Book Now &rarr;
                   </Button>
                 </Link>

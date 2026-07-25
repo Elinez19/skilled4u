@@ -3,7 +3,7 @@ import { Snowflake, Tv, Sparkles, Square, Car, Hammer, ChefHat, Brush, Truck, Sa
 export type ServiceItem = {
   id: string;
   name: string;
-  icon: any; // Lucide icon component
+  icon: unknown; // Lucide icon component
   subServices?: string[];
 };
 

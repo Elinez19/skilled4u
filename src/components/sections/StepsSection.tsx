@@ -62,7 +62,7 @@ export function StepsSection() {
                 {step.icon}
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">{step.title}</h3>
-              <p className="text-muted-foreground leading-relaxed flex-grow">
+              <p className="text-muted-foreground leading-relaxed grow">
                 {step.description}
               </p>
             </div>

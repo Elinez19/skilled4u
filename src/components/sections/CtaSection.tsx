@@ -22,10 +22,10 @@ export function CtaSection() {
         </div>
 
         {/* Right Content / Image mockups */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end relative z-10 h-[250px] md:h-auto">
-            <div className="relative w-[300px] h-[300px] md:-my-16">
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end relative z-10 h-62.5 md:h-auto">
+            <div className="relative w-75 h-75 md:-my-16">
               {/* Phone */}
-              <div className="absolute right-0 top-0 w-48 h-[350px] bg-white rounded-[2rem] shadow-2xl border-[6px] border-foreground/90 overflow-hidden transform rotate-6 z-10">
+              <div className="absolute right-0 top-0 w-48 h-87.5 bg-white rounded-[2rem] shadow-2xl border-[6px] border-foreground/90 overflow-hidden transform rotate-6 z-10">
                 <div className="p-4 flex flex-col gap-3 h-full bg-muted/50">
                   <div className="h-6 w-24 bg-border rounded-full mb-2"></div>
                   <div className="h-12 w-full bg-white rounded-xl shadow-sm border border-border/50"></div>
@@ -55,7 +55,7 @@ export function CtaSection() {
         
         {/* Decorative background shapes */}
         <div className="absolute top-0 right-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/40 rounded-full blur-3xl mix-blend-screen"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-primary/40 rounded-full blur-3xl mix-blend-screen"></div>
         </div>
       </div>
     </section>
