@@ -1,5 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import infoImg from "@/assets/professional-plumber-1.jpg";
 
 export function InfoSection() {
@@ -33,9 +34,11 @@ export function InfoSection() {
             ))}
           </ul>
 
-          <Button variant="link" className="text-primary font-bold p-0 h-auto hover:text-primary/90 text-base">
-            Learn More About Security &rarr;
-          </Button>
+          <Link to="/book">
+            <Button variant="link" className="text-primary font-bold p-0 h-auto hover:text-primary/90 text-base">
+              Book Now &rarr;
+            </Button>
+          </Link>
         </div>
 
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Briefcase, DollarSign, CalendarCheck, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function JoinAsPro() {
   const benefits = [
@@ -44,9 +45,11 @@ export function JoinAsPro() {
           <p className="text-slate-600 mb-8 text-lg md:text-xl leading-relaxed">
             Join thousands of skilled professionals who are finding reliable work, managing their schedules, and increasing their earnings on our platform.
           </p>
-          <Button className="btn btn-primary rounded-full px-8 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all">
-            Apply as a Pro Today
-          </Button>
+          <Link to="/book">
+            <Button className="btn btn-primary rounded-full px-8 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all">
+              Book Now
+            </Button>
+          </Link>
         </div>
 
         {/* Right Content / Benefits Grid */}

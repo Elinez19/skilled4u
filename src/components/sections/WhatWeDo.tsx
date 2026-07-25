@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Plug, Droplets, Snowflake, Sofa, Truck, Sparkles } from "lucide-react";
-import { ServiceBookingModal } from "@/components/ServiceBookingModal";
-
+import { Link } from "react-router-dom";
 export function WhatWeDo() {
   const services = [
     {
@@ -61,11 +60,11 @@ export function WhatWeDo() {
             <p className="text-muted-foreground mb-8 flex-grow leading-relaxed">
               {service.description}
             </p>
-            <ServiceBookingModal>
-              <Button variant="ghost" className="mt-auto text-primary hover:text-primary/90 hover:bg-primary/5 p-0 h-auto font-semibold group">
+            <Link to="/book" className="mt-auto w-full block">
+              <Button size="lg" className="w-full font-semibold group text-base py-6">
                 Book Now <span className="ml-2 group-hover:translate-x-1 transition-transform">&gt;</span>
               </Button>
-            </ServiceBookingModal>
+            </Link>
           </div>
         ))}
       </div>

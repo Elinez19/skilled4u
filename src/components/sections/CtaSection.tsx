@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export function CtaSection() {
   return (
@@ -13,9 +14,11 @@ export function CtaSection() {
           <p className="text-blue-100 mb-8 max-w-sm text-lg">
             Download the app and experience the future of on-demand skilled services.
           </p>
-          <Button className="btn btn-primary rounded-full px-8 py-6 text-base">
-            Request a Pro Now
-          </Button>
+          <Link to="/book">
+            <Button className="btn btn-primary rounded-full px-8 py-6 text-base">
+              Book Now
+            </Button>
+          </Link>
         </div>
 
         {/* Right Content / Image mockups */}

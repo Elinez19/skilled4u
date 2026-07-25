@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -79,12 +80,16 @@ export function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button size="lg" className="btn btn-primary rounded-full px-8 py-6 text-base">
-                Book an Artisan Now &rarr;
-              </Button>
-              <Button size="lg" variant="outline" className="btn btn-outline border-white/20 text-white hover:bg-white/10 hover:text-white bg-transparent rounded-full px-8 py-6 text-base backdrop-blur-sm">
-                Explore Services
-              </Button>
+              <Link to="/book">
+                <Button size="lg" className="btn btn-primary rounded-full px-8 py-6 text-base w-full sm:w-auto">
+                  Book Now &rarr;
+                </Button>
+              </Link>
+              <Link to="/book">
+                <Button size="lg" variant="outline" className="btn btn-outline border-white/20 text-white hover:bg-white/10 hover:text-white bg-transparent rounded-full px-8 py-6 text-base backdrop-blur-sm w-full sm:w-auto">
+                  Book Now
+                </Button>
+              </Link>
             </div>
           </div>
 

@@ -1,6 +1,7 @@
 import { costEstimates } from "../../data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 export function ServicesCard() {
   return (
@@ -30,18 +31,20 @@ export function ServicesCard() {
               <p className="text-muted-foreground text-sm mb-4">
                 <span className="text-foreground font-semibold">{estimate.priceRange}</span> <span className="text-muted-foreground/80">{estimate.condition}</span>
               </p>
-              <a href={estimate.link} className="text-primary hover:text-primary/90 text-sm font-bold transition-colors group inline-flex items-center">
-                Read more <span className="ml-1 group-hover:translate-x-1 inline-block transition-transform">&raquo;</span>
-              </a>
+              <Link to="/book" className="text-primary hover:text-primary/90 text-sm font-bold transition-colors group inline-flex items-center">
+                Book Now <span className="ml-1 group-hover:translate-x-1 inline-block transition-transform">&raquo;</span>
+              </Link>
             </CardContent>
           </Card>
         ))}
       </div>
 
       <div className="flex justify-center">
-        <Button size="lg" className="px-8 font-semibold rounded-full bg-primary hover:bg-primary/90 text-primary-foreground transition-colors shadow-sm hover:shadow-md">
-          View All Cost Estimates
-        </Button>
+        <Link to="/book">
+          <Button size="lg" className="px-8 font-semibold rounded-full bg-primary hover:bg-primary/90 text-primary-foreground transition-colors shadow-sm hover:shadow-md">
+            Book Now
+          </Button>
+        </Link>
       </div>
     </section>
   );

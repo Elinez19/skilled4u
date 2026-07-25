@@ -141,30 +141,24 @@ export const servicesList = [
 
 export const navLinks = [
   { title: "Home", href: "/" },
-  { title: "Services", href: "/#services" },
-  { title: "How it Works", href: "/#how-it-works" },
-  { title: "Nanny Services", href: "/nanny-and-maid-services" },
-  { title: "Become a Pro", href: "/#join-pro" },
+  { title: "Services", href: "/services" },
+  { title: "Become a Pro", href: "/become-artisan" },
 ];
 
 export const footerLinks = {
   quickLinks: [
-    { title: "Book a Service", href: "#" },
-    { title: "Join as a Pro", href: "#" },
-    { title: "Browse Categories", href: "#" },
-    { title: "Pricing", href: "#" },
-    { title: "About Us", href: "#" },
+    { title: "Home", href: "/" },
+    { title: "Services", href: "/services" },
+    { title: "Book a Service", href: "/book" },
+    { title: "Join as a Pro", href: "/become-artisan" },
   ],
   resources: [
     { title: "Help Center", href: "#" },
     { title: "Safety & Trust", href: "#" },
-    { title: "Pro Guidelines", href: "#" },
-    { title: "Blog", href: "#" },
     { title: "Contact Us", href: "#" },
   ],
   support: [
     { title: "Live Chat", href: "#" },
-    { title: "City Coverage", href: "#" },
     { title: "+1 (800) 123-4567", href: "#", isText: true },
     { title: "support@skilled4u.com", href: "mailto:support@skilled4u.com" },
   ],
